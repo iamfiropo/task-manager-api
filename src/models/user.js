@@ -1,8 +1,11 @@
 const mongoose = require("mongoose");
 const { isEmail } = require("validator");
 const bcrypt = require('bcrypt');
+const { config } = require('dotenv');
 const jwt = require('jsonwebtoken');
 const Task = require('./task');
+
+config();
 
 const userSchema = new mongoose.Schema({
   name: {
